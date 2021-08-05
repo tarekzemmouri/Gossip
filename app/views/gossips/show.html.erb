@@ -1,0 +1,12 @@
+<div>
+<h1> Tout vos gossip sont juste la avec leurs identifiants: </h1>
+</div>
+<div>
+<%= @gossips.id %>
+<%= @gossips.content %>
+<%= @gossips.title %> 
+</div>
+<div> <p> <%= @date %>  </p> </div>
+<br>
+<a href="<%= gossips_path %>"> Revenir en arrière </a> <br> 
+<a href="<%= edit_gossip_path %>"> Modifier </a>

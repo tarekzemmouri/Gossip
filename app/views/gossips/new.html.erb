@@ -1,0 +1,16 @@
+<h2 class="font-weight-normal"> Formulaire d'ajout de gossip: </h2>
+<br><br>
+
+
+
+<form action= <%= gossips_new_path %> method="POST" class="container">
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> > <br><br>
+    
+    <p> Titre du potin: </p>
+    <input type="text" class="form-control" name="title"><br>
+    <p> Contenu du potin: </p>
+    <textarea class="form-control" name="content"> </textarea> <br> <br>
+    <input type="submit" value="Valider">
+   
+    <input type="hidden" class="form-control" name="user_id" value="<%= rand(1..50)%>" ><br>
+</form>

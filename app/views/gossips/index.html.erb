@@ -1,0 +1,21 @@
+
+
+
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %> 
+
+<div class="card">
+  <div class="card-body">
+    <p> <% @gossips.each do |gossip| %> </p>      
+        <%= gossip.id %>
+        <%= gossip.title %>
+        <%= gossip.content%>
+        <%=@date%>
+        <a href="<%= gossip_path(gossip.id)%>"> Lire la suite </a> <br>
+        <a href="<%= gossip_path(gossip.id)%>" data-confirm="êtes-vous sur de vouloir supprimer ce potin ?" data-methode="DELETE"> Supprimer </a>
+        <% end %>
+  </div>
+</div>
